@@ -1,0 +1,4 @@
+
+drop table Customers;
+drop table Orders;
+drop table Shippings;   

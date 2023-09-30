@@ -1,0 +1,357 @@
+-- คำสั่งสร้างตารางฉบับสมบูณ
+
+
+-- สร้างตาราง Customers
+CREATE TABLE Customers (
+    CustomerID VARCHAR(5) PRIMARY KEY,
+    CustomerName VARCHAR(255),
+    Address VARCHAR(255),
+    City VARCHAR(255),
+    PostalCode VARCHAR(255),
+    Country VARCHAR(255)
+);
+
+-- เพิ่มข้อมูลลูกค้าตัวอย่าง
+INSERT INTO Customers (CustomerID, CustomerName, Address, City, PostalCode, Country)
+VALUES
+    ('C001', 'John Smith', '123 Main St', 'New York', '10001', 'USA'),
+    ('C002', 'Alice Johnson', '456 Elm St', 'Los Angeles', '90001', 'USA'),
+    ('C003', 'David Wilson', '789 Oak St', 'Chicago', '60601', 'USA'),
+    ('C004', 'Mary Davis', '101 Pine St', 'San Francisco', '94101', 'USA'),
+    ('C005', 'Robert Lee', '222 Maple St', 'Miami', '33101', 'USA'),
+    ('C006', 'Sarah White', '333 Birch St', 'Dallas', '75201', 'USA'),
+    ('C007', 'Michael Harris', '444 Cedar St', 'Houston', '77001', 'USA'),
+    ('C008', 'Jennifer Brown', '555 Redwood St', 'Phoenix', '85001', 'USA'),
+    ('C009', 'James Miller', '666 Willow St', 'Philadelphia', '19101', 'USA'),
+    ('C010', 'Linda Taylor', '777 Pine St', 'Boston', '02101', 'USA'),
+    ('C011', 'William Anderson', '888 Elm St', 'Seattle', '98101', 'USA'),
+    ('C012', 'Karen Martinez', '999 Oak St', 'Denver', '80201', 'USA'),
+    ('C013', 'Richard Garcia', '111 Maple St', 'Atlanta', '30301', 'USA'),
+    ('C014', 'Patricia Lopez', '222 Birch St', 'Detroit', '48201', 'USA'),
+    ('C015', 'Charles Hall', '333 Cedar St', 'Minneapolis', '55401', 'USA'),
+    ('C016', 'Jessica Young', '444 Redwood St', 'Miami', '33102', 'USA'),
+    ('C017', 'Matthew Lewis', '555 Willow St', 'Chicago', '60602', 'USA'),
+    ('C018', 'Susan Turner', '666 Pine St', 'Los Angeles', '90002', 'USA'),
+    ('C019', 'Daniel Rodriguez', '777 Elm St', 'San Francisco', '94102', 'USA'),
+    ('C020', 'Nancy Clark', '888 Oak St', 'Dallas', '75202', 'USA'),
+    ('C021', 'Joseph Walker', '999 Maple St', 'Houston', '77002', 'USA'),
+    ('C022', 'Megan Hill', '111 Birch St', 'Phoenix', '85002', 'USA'),
+    ('C023', 'John Smith', '222 Cedar St', 'Philadelphia', '19102', 'USA'),
+    ('C024', 'Lisa Adams', '333 Redwood St', 'Boston', '02102', 'USA'),
+    ('C025', 'Paul White', '444 Willow St', 'Seattle', '98102', 'USA'),
+    ('C026', 'Catherine Baker', '555 Pine St', 'Denver', '80202', 'USA'),
+    ('C027', 'Kevin King', '666 Oak St', 'Atlanta', '30302', 'USA'),
+    ('C028', 'Amanda Wright', '777 Maple St', 'Detroit', '48202', 'USA'),
+    ('C029', 'Richard Brown', '888 Birch St', 'Minneapolis', '55402', 'USA'),
+    ('C030', 'Laura Martinez', '999 Cedar St', 'Miami', '33103', 'USA'),
+    ('C031', 'Maria Garcia', '111 Oak St', 'Madrid', '28001', 'Spain'),
+    ('C032', 'Carlos Rodriguez', '222 Elm St', 'Barcelona', '08001', 'Spain'),
+    ('C033', 'Isabel Fernandez', '333 Maple St', 'Seville', '41001', 'Spain'),
+    ('C034', 'Javier Martinez', '444 Birch St', 'Valencia', '46001', 'Spain'),
+    ('C035', 'Ana Lopez', '555 Cedar St', 'Bilbao', '48001', 'Spain'),
+    ('C036', 'Pedro Sanchez', '666 Redwood St', 'Malaga', '29001', 'Spain'),
+    ('C037', 'Sofia Perez', '777 Willow St', 'Zaragoza', '50001', 'Spain'),
+    ('C038', 'Miguel Lopez', '888 Pine St', 'Madrid', '28002', 'Spain'),
+    ('C039', 'Elena Garcia', '999 Oak St', 'Barcelona', '08002', 'Spain'),
+    ('C040', 'Pablo Rodriguez', '111 Maple St', 'Seville', '41002', 'Spain'),
+    ('C041', 'William Brown', '111 Oak St', 'London', 'EC1A 1BB', 'UK'),
+    ('C042', 'Sophia Wilson', '222 Elm St', 'Manchester', 'M1 1AA', 'UK'),
+    ('C043', 'Thomas Smith', '333 Maple St', 'Birmingham', 'B1 1AA', 'UK'),
+    ('C044', 'Emily Johnson', '444 Birch St', 'Liverpool', 'L1 1AA', 'UK'),
+    ('C045', 'James Davis', '555 Cedar St', 'Leeds', 'LS1 1AA', 'UK'),
+    ('C046', 'Olivia Wilson', '666 Redwood St', 'Glasgow', 'G1 1AA', 'UK'),
+    ('C047', 'Daniel Taylor', '777 Willow St', 'Edinburgh', 'EH1 1AA', 'UK'),
+    ('C048', 'Amelia Harris', '888 Pine St', 'Bristol', 'BS1 1AA', 'UK'),
+    ('C049', 'Joseph White', '999 Oak St', 'Cardiff', 'CF1 1AA', 'UK'),
+    ('C050', 'Charlotte Clark', '111 Maple St', 'Newcastle', 'NE1 1AA', 'UK'),
+    ('C051', 'Liam Smith', '111 Oak St', 'Toronto', 'M5V 1M1', 'Canada'),
+    ('C052', 'Emma Johnson', '222 Elm St', 'Vancouver', 'V6C 1A1', 'Canada'),
+    ('C053', 'Noah Davis', '333 Maple St', 'Montreal', 'H3B 2B2', 'Canada'),
+    ('C054', 'Olivia Wilson', '444 Birch St', 'Calgary', 'T2P 0M5', 'Canada'),
+    ('C055', 'Ethan Martinez', '555 Cedar St', 'Ottawa', 'K1P 1A1', 'Canada'),
+    ('C056', 'Suthipong Srisai', '123 Sukhumvit Rd', 'Bangkok', '10110', 'Thailand'),
+    ('C057', 'Naree Chaowana', '456 Ratchadaphisek Rd', 'Chiang Mai', '50000', 'Thailand'),
+    ('C058', 'Somchai Tanachai', '789 Nimmanhaemin Rd', 'Phuket', '83100', 'Thailand'),
+    ('C059', 'Narin Jantarat', '101 Tha Pae Rd', 'Pattaya', '20260', 'Thailand'),
+    ('C060', 'Preecha Saengchaipat', '222 Phahon Yothin Rd', 'Krabi', '81000', 'Thailand'),
+    ('C061', 'Nuchanart Charoenwong', '333 Surawongse Rd', 'Samui', '84140', 'Thailand'),
+    ('C062', 'Piyachai Thepthong', '444 Sukhothai Rd', 'Nakhon Ratchasima', '30000', 'Thailand'),
+    ('C063', 'Supaporn Somjai', '555 Phitsanulok Rd', 'Udon Thani', '41000', 'Thailand'),
+    ('C064', 'Arthit Singhathep', '666 Roi Et Rd', 'Ayutthaya', '13000', 'Thailand'),
+    ('C065', 'Nipaporn Thongchai', '777 Chiang Rai Rd', 'Hua Hin', '77110', 'Thailand'),
+    ('C066', 'Wiparat Kanchanapoom', '888 Nakhon Sawan Rd', 'Surat Thani', '84000', 'Thailand'),
+    ('C067', 'Suparat Phongkum', '999 Trang Rd', 'Chonburi', '20130', 'Thailand'),
+    ('C068', 'Li Wei', '123 Nanjing Rd', 'Shanghai', '200001', 'China'),
+    ('C069', 'Zhang Min', '456 West Lake Rd', 'Hangzhou', '310001', 'China'),
+    ('C070', 'Wang Jie', '789 Tiananmen Square', 'Beijing', '100000', 'China'),
+    ('C071', 'Chen Xin', '101 Huaqiangbei Rd', 'Shenzhen', '518000', 'China'),
+    ('C072', 'Liu Ying', '222 Wangfujing St', 'Beijing', '100006', 'China'),
+    ('C073', 'Yang Gang', '333 East Nanjing Rd', 'Shanghai', '200002', 'China'),
+    ('C074', 'Xu Jing', '444 Gulou St', 'Nanjing', '210001', 'China'),
+    ('C075', 'He Qiang', '555 Yuyuan Garden Rd', 'Shanghai', '200040', 'China'),
+    ('C076', 'Zhou Mei', '666 Sanlitun St', 'Beijing', '100027', 'China'),
+    ('C077', 'Wu Dong', '777 Xintiandi Rd', 'Shanghai', '200041', 'China'),
+    ('C078', 'Liang Tao', '888 Zhongshan Rd', 'Guangzhou', '510000', 'China'),
+    ('C079', 'Xiaoyan Zhang', '999 People Square', 'Shanghai', '200002', 'China'),
+    ('C080', 'Huang Wei', '111 Heping Rd', 'Chengdu', '610000', 'China'),
+    ('C081', 'Zhu Ming', '222 Wuhou Shrine St', 'Chengdu', '610041', 'China'),
+    ('C100', 'James Smith', '123 Oxford St', 'London', 'W1D 1LR', 'England'),
+    ('C101', 'Emily Johnson', '456 Baker St', 'Manchester', 'M1 1AB', 'England'),
+    ('C102', 'William Davis', '789 Cambridge St', 'Birmingham', 'B1 1CD', 'England'),
+    ('C103', 'Taro Yamada', '123 Ginza Rd', 'Tokyo', '100-0001', 'Japan'),
+    ('C104', 'Yuki Tanaka', '456 Shibuya Rd', 'Tokyo', '150-0002', 'Japan'),
+    ('C105', 'Hiroshi Suzuki', '789 Osaka Rd', 'Osaka', '550-0003', 'Japan'),
+    ('C106', 'Aya Nakamura', '101 Kyoto Rd', 'Kyoto', '600-0004', 'Japan'),
+    ('C107', 'Riku Sato', '222 Hiroshima Rd', 'Hiroshima', '730-0005', 'Japan'),
+    ('C108', 'Hans Müller', '123 Bahnhofstrasse', 'Zurich', '8001', 'Switzerland'),
+    ('C109', 'Anna Meier', '456 Paradeplatz', 'Geneva', '1204', 'Switzerland'),
+    ('C110', 'Peter Schmidt', '789 Seestrasse', 'Lucerne', '6000', 'Switzerland'),
+    ('C111', 'Hans Schmidt', '123 Kurfürstendamm', 'Berlin', '10719', 'Germany'),
+    ('C112', 'Anna Müller', '456 Marienplatz', 'Munich', '80331', 'Germany'),
+    ('C113', 'Andreas Weber', '789 Jungfernstieg', 'Hamburg', '20354', 'Germany'),
+    ('C114', 'Sabine Wagner', '101 Friedrichstrasse', 'Berlin', '10117', 'Germany'),
+    ('C115', 'Michael Fischer', '222 Neuer Wall', 'Hamburg', '20354', 'Germany'),
+    ('C116', 'Katrin Becker', '333 Karlsplatz', 'Munich', '80335', 'Germany'),
+    ('C117', 'Thomas Richter', '444 Schlossplatz', 'Stuttgart', '70173', 'Germany'),
+    ('C118', 'Laura Keller', '555 Alexanderplatz', 'Berlin', '10178', 'Germany'),
+    ('C119', 'Peter Hartmann', '666 Hohenzollernplatz', 'Munich', '80796', 'Germany'),
+    ('C120', 'Nicole Schmitt', '777 Jungfernstieg', 'Hamburg', '20354', 'Germany');
+ 
+ 
+
+-- ตารางพนักงาน
+CREATE TABLE Employees (
+    EmployeeID VARCHAR(4) PRIMARY KEY,
+    FirstName VARCHAR(255) NOT NULL,
+    LastName VARCHAR(255) NOT NULL,
+    BirthDate DATE,
+    Photo BLOB,
+    Notes TEXT
+);
+
+-- เพืมกลุ่มตัวอย่างพนักงานขาย
+INSERT INTO Employees (EmployeeID, LastName, FirstName, BirthDate, Photo, Notes)
+VALUES
+    ('EM01', 'Smith', 'John', '1980-05-15', NULL, 'Sales Department'),
+    ('EM02', 'Johnson', 'Alice', '1985-02-28', NULL, 'Marketing Department'),
+    ('EM03', 'Davis', 'David', '1990-07-10', NULL, 'Finance Department'),
+    ('EM04', 'Wilson', 'Mary', '1982-09-22', NULL, 'HR Department'),
+    ('EM05', 'Lee', 'Robert', '1988-03-12', NULL, 'IT Department'),
+    ('EM06', 'Harris', 'Michael', '1983-12-05', NULL, 'Sales Department'),
+    ('EM07', 'Brown', 'Jennifer', '1995-04-20', NULL, 'Marketing Department'),
+    ('EM08', 'Miller', 'James', '1979-08-17', NULL, 'Finance Department'),
+    ('EM09', 'Taylor', 'Linda', '1991-01-30', NULL, 'HR Department'),
+    ('EM10', 'Anderson', 'William', '1987-06-25', NULL, 'IT Department');
+    
+    
+-- เพิ่มตารางซับพาย
+CREATE TABLE Suppliers (
+    SupplierID VARCHAR(3) PRIMARY KEY,
+    SupplierName VARCHAR(255) NOT NULL,
+    ContactName VARCHAR(255),
+    Address VARCHAR(255),
+    Country VARCHAR(255) NOT NULL,
+    Phone VARCHAR(20)
+);
+
+-- เพืมกลุ่มตัวอย่างตารางซับพาย
+INSERT INTO Suppliers (SupplierID, SupplierName, ContactName, Address, Country, Phone)
+VALUES
+    ('S001', 'ABC Electronics', 'John Smith', '123 Main St', 'USA', '555-1234'),
+    ('S002', 'XYZ Components', 'Alice Johnson', '456 Elm St', 'USA', '555-5678'),
+    ('S003', 'Tech Solutions', 'David Wilson', '789 Oak St', 'Canada', '555-9876'),
+    ('S004', 'Global Imports', 'Mary Davis', '101 Pine St', 'Canada', '555-5432'),
+    ('S005', 'Euro Tech', 'Robert Lee', '222 Maple St', 'UK', '555-1111'),
+    ('S006', 'Asia Traders', 'Sarah White', '333 Birch St', 'UK', '555-2222'),
+    ('S007', 'Pacific Supplies', 'Michael Harris', '444 Cedar St', 'UK', '555-3333'),
+    ('S008', 'Worldwide Electronics', 'Jennifer Brown', '555 Redwood St', 'USA', '555-4444');
+
+
+
+
+-- เพื่มตารางประเภทสินค้า
+CREATE TABLE Categories (
+    CategoryID INT PRIMARY KEY,
+    CategoryName VARCHAR(255) NOT NULL,
+    Description TEXT
+);
+-- เพืมกลุ่มตัวอย่างตารางประเภทสินค้า
+INSERT INTO Categories (CategoryID, CategoryName, Description)
+VALUES
+    (1, 'Electronics', 'Electrical devices and components'),
+    (2, 'Clothing', 'Apparel and fashion accessories'),
+    (3, 'Books', 'Printed and digital publications'),
+    (4, 'Furniture', 'Home and office furnishings'),
+    (5, 'Toys', 'Playthings for children and adults');
+
+
+
+
+-- เพิ่มตารางสินค้า 
+CREATE TABLE Products (
+    ProductID VARCHAR(5) PRIMARY KEY,
+    ProductName VARCHAR(255) NOT NULL,
+    SupplierID VARCHAR(3),
+    CategoryID INT,
+    Unit VARCHAR(50),
+    Price DECIMAL(10, 2),
+    FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID),
+    FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID)
+);
+
+-- เพิ่มกลุ่มตัวอย่างสินค้า 20 รายการ
+INSERT INTO Products (ProductID, ProductName, SupplierID, CategoryID, Unit, Price)
+VALUES
+    ('P0001', 'MacBook Air : M1', 'S001', 1, 'Piece', 99.99),
+    ('P0002', 'MOTF PREMIUM พลีท คอร์เซ็ท เดรสมิดี้', 'S002', 2, 'Piece', 199.99),
+    ('P0003', 'จิตวิทยาสายดาร์ก', 'S003', 3, 'Piece', 299.99),
+    ('P0004', 'BG Furniture เก้าอี้อเนกประสงค์', 'S004', 4, 'Piece', 399.99),
+    ('P0005', 'MacBook Air : M1', 'S005', 1, 'Piece', 499.99),
+    ('P0006', 'DAZY เดรส สีพื้น ผ่าลึก', 'S006', 2, 'Piece', 599.99),
+    ('P0007', 'โลกก่อนหน้าเรา (The World Before Us)', 'S007', 3, 'Piece', 699.99),
+    ('P0008', 'Racing Gaming Chair เก้าอี้เกมส์ เก้าอี้คอเกมส์ ', 'S008', 4, 'Piece', 799.99),
+    ('P0009', 'iPhone 13', 'S001', 1, 'Piece', 899.99),
+    ('P0010', 'EZwear ชุดเสื้อยืด สีพื้น ผ่าสูง', 'S002', 2, 'Piece', 999.99),
+    ('P0011', 'MASTER MIND', 'S003', 3, 'Piece', 1099.99),
+    ('P0012', 'ชั้นเก็บของ ชั้นวางหนังสือ', 'S004', 4, 'Piece', 1199.99),
+    ('P0013', 'iPhone 13', 'S005', 1, 'Piece', 1299.99),
+    ('P0014', 'MOD เดรสคล้องคอ ลายดอกไม้ทั้งตัว โชว์หลัง', 'S006', 2, 'Piece', 1399.99),
+    ('P0015', 'คิดแล้วรวย ฉบับกระชับ : THINK and GROW RICH', 'S007', 3, 'Piece', 1499.99),
+    ('P0016', 'Wardrobe ตู้เสื้อผ้า ตู้เสื้อผ้าไม้', 'S008', 4, 'Piece', 1599.99),
+    ('P0017', 'Apple Watch SE ', 'S001', 1, 'Piece', 1699.99),
+    ('P0018', 'MOD กางเกงขากว้าง เอวสูง', 'S002', 2, 'Piece', 1799.99),
+    ('P0019', 'ผู้นำก็ต้องมีโค้ช', 'S003', 3, 'Piece', 1899.99);
+
+
+
+
+
+-- สร้างตารางขนส่ง 
+CREATE TABLE Transport (
+    TransportID INT PRIMARY KEY,
+    TransportName VARCHAR(255) NOT NULL,
+    Phone VARCHAR(20)
+);
+
+-- เพิ่มตัวอย่างขนส่ง 3 ขนส่ง
+INSERT INTO Transport (TransportID, TransportName, Phone)
+VALUES
+    (1, 'DHL', '123-456-7890'),
+    (2, 'CJ Logistic', '987-654-3210'),
+    (3, 'Inter Express Logistics', '555-123-4567');
+
+
+
+-- เพิ่มตารางออรเดอร์
+CREATE TABLE Orders (
+    OrderID VARCHAR(2) PRIMARY KEY,
+    OrderDate DATE,
+    CustomerID VARCHAR(5), -- อ้างอิงมาจากตาราง Customer
+    EmployeeID VARCHAR(4), -- อ้างอิงมาจากตาราง Employees
+    TransportID INT, -- อ้างอิงมาจากตาราง Transport
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID),
+    FOREIGN KEY (TransportID) REFERENCES Transport(TransportID)
+);
+-- เพิ่มตัวอย่างออร์เดอร์ 30 ออร์เดอร์
+INSERT INTO Orders (OrderID, OrderDate, CustomerID, EmployeeID, TransportID)
+VALUES
+    ('O1', '2023-09-30', 'C001', 'EM01', 1),
+    ('O2', '2023-09-30', 'C002', 'EM01', 2),
+    ('O3', '2023-09-30', 'C003', 'EM01', 3),
+    ('O4', '2023-09-30', 'C004', 'EM03', 1),
+    ('O5', '2023-09-30', 'C005', 'EM03', 2),
+    ('O6', '2023-09-30', 'C006', 'EM03', 3),
+    ('O7', '2023-09-30', 'C007', 'EM08', 1),
+    ('O8', '2023-09-30', 'C008', 'EM09', 1),
+    ('O9', '2023-09-30', 'C009', 'EM04', 2),
+    ('O10', '2023-09-30', 'C010', 'EM06', 3),
+    ('O11', '2023-09-30', 'C011', 'EM08', 2),
+    ('O12', '2023-09-30', 'C012', 'EM08', 2),
+    ('O13', '2023-09-30', 'C013', 'EM04', 3),
+    ('O14', '2023-09-30', 'C014', 'EM06', 1),
+    ('O15', '2023-09-30', 'C015', 'EM05', 1),
+    ('O16', '2023-09-30', 'C016', 'EM05', 1),
+    ('O17', '2023-09-30', 'C017', 'EM05', 1),
+    ('O18', '2023-09-30', 'C018', 'EM01', 1),
+    ('O19', '2023-09-30', 'C019', 'EM01', 1),
+    ('O20', '2023-09-30', 'C020', 'EM01', 2),
+    ('O21', '2023-09-30', 'C021', 'EM08', 2),
+    ('O22', '2023-09-30', 'C022', 'EM08', 2),
+    ('O23', '2023-09-30', 'C023', 'EM01', 2),
+    ('O24', '2023-09-30', 'C024', 'EM01', 2),
+    ('O25', '2023-09-30', 'C025', 'EM01', 2),
+    ('O26', '2023-09-30', 'C026', 'EM02', 2),
+    ('O27', '2023-09-30', 'C027', 'EM04', 3),
+    ('O28', '2023-09-30', 'C028', 'EM06', 3),
+    ('O29', '2023-09-30', 'C029', 'EM09', 2),
+    ('O30', '2023-09-30', 'C030', 'EM10', 3);
+
+
+
+
+CREATE TABLE OrderDetail (
+    OrderDetailID INT PRIMARY KEY,
+    OrderID varchar(2),
+    ProductID varchar(5),
+    Quantity INT,
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
+
+-- เพิ่มตัวอย่าง OrderDetail 50 รายการ
+INSERT INTO OrderDetail (OrderDetailID, OrderID, ProductID, Quantity)
+VALUES
+    (1, 'O1', 'P0001', 8),
+    (2, 'O2', 'P0002', 5),
+    (3, 'O3', 'P0003', 10),
+    (4, 'O4', 'P0004', 3),
+    (5, 'O5', 'P0005', 8),
+    (6, 'O6', 'P0006', 4),
+    (7, 'O7', 'P0007', 6),
+    (8, 'O8', 'P0008', 7),
+    (9, 'O9', 'P0009', 2),
+    (10, 'O10', 'P0010', 9),
+    (11, 'O11', 'P0011', 11),
+    (12, 'O12', 'P0012', 1),
+    (13, 'O13', 'P0013', 5),
+    (14, 'O14', 'P0014', 3),
+    (15, 'O15', 'P0015', 7),
+    (16, 'O16', 'P0016', 6),
+    (17, 'O17', 'P0017', 8),
+    (18, 'O18', 'P0018', 4),
+    (19, 'O19', 'P0019', 9),
+    (20, 'O20', 'P0001', 3),
+    (21, 'O21', 'P0001', 6),
+    (22, 'O22', 'P0002', 7),
+    (23, 'O23', 'P0003', 5),
+    (24, 'O24', 'P0004', 4),
+    (25, 'O25', 'P0005', 2),
+    (26, 'O26', 'P0006', 8),
+    (27, 'O27', 'P0007', 1),
+    (28, 'O28', 'P0008', 10),
+    (29, 'O29', 'P0009', 7),
+    (30, 'O30', 'P0003', 9),
+    (31, 'O1', 'P0013', 3),
+    (32, 'O2', 'P0012', 6),
+    (33, 'O3', 'P0013', 4),
+    (34, 'O4', 'P0014', 5),
+    (35, 'O5', 'P0015', 8),
+    (36, 'O6', 'P0016', 2),
+    (37, 'O7', 'P0017', 7),
+    (38, 'O8', 'P0018', 9),
+    (39, 'O9', 'P0019', 1),
+    (40, 'O4', 'P0001', 6),
+    (41, 'O4', 'P0001', 4),
+    (42, 'O2', 'P0002', 5),
+    (43, 'O3', 'P0003', 3),
+    (44, 'O4', 'P0004', 8),
+    (45, 'O5', 'P0005', 2),
+    (46, 'O6', 'P0006', 9),
+    (47, 'O7', 'P0007', 7),
+    (48, 'O8', 'P0008', 6),
+    (49, 'O9', 'P0019', 1),
+    (50, 'O5', 'P0005', 5);
+
+
+
