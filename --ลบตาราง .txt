@@ -1,4 +1,10 @@
+รูปแบบ (Syntax)
+SQL Drop table statement ข้อมูลที่ต้องระบุคือ table name
 
+DROP TABLE <table_name>;
+คำเตือน – คำสั่ง SQL Drop table statement เมื่อทำการรันสำเร็จแล้ว เราจะไม่สามารถเรียกข้อมูลภายใน table กลับคืนมาได้อีก
+
+----------------------------------------------------------------------------------------------
 drop table Customers;
 drop table Orders;
 drop table Shippings;   
