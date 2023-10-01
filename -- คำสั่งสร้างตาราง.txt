@@ -79,6 +79,13 @@ WHERE Country = 'UK';
 SELECT COUNT(*) AS TotalCustomers
 FROM Customers
 WHERE Country = 'UK';
+
+2.1 ต้องการรู้ลูกค้าทั้งหมดว่าแต่ละประเทศรวมมีประเทศละกี่คน
+
+SELECT Country, COUNT(*) AS CustomerCount
+FROM Customers
+GROUP BY Country
+ORDER BY CustomerCount DESC;
 -----------------------------------------------------------------------------------------------------------------------------------------
 
 ----- รายงานการขาย  ----------------------------
