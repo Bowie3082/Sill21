@@ -1,6 +1,35 @@
 -  โจทย์คำสั่ง SQL: - 
 
-1. การทราบยอดการขายทั้งหมดในวันที่ 30/09/2023:
-2. การแสดงรายชื่อลูกค้าและรายการสั่งซื้อของแต่ละลูกค้า:
-3. การแสดงรายการสั่งซื้อที่มีสินค้าเกินจำนวน 5 ชิ้น:
-4. การหาสินค้าที่มีการสั่งซื้อมากที่สุด:
+1. ต้องการทราบยอดการขายทั้งหมดในวันที่ 30/09/2023:
+select  Orders.OrderID as "รหัสรายการสั่งซื้อ",
+		Orders.OrderDate as "วันที่สั่งซื้อ",
+        Products.ProductID as "สินค้า",
+        Products.ProductName as "ชื่อสินค้า"
+from Orders 
+inner join OrderDetail on Orders.OrderID = OrderDetail.OrderID
+inner join Products  on OrderDetail.ProductID = Products.ProductID
+where OrderDate = '2023-09-30';
+----------------------------------------------------------
+2. ต้องการแสดงรายชื่อลูกค้าและรายการสั่งซื้อของแต่ละลูกค้า:
+select c.CustomerName,o.OrderID,o.OrderDate
+from Customers as C
+inner join Orders as o on c.CustomerID = o.CustomerID;
+-------------------------------------------------------------
+3. ต้องการแสดงรายการสั่งซื้อที่มีสินค้าเกินจำนวน 5 ชิ้น:
+select o.OrderID as "รหัสรายการสั่งซื้อ",
+		o.OrderDate as "วันที่สั่งซื้อ",
+        p.ProductID as "สินค้า",
+        od.Quantity as "จำนวนสินค้า"
+from  Orders as o
+inner join OrderDetail as od on o.OrderID = od.OrderID
+inner join Products as p on od.ProductID = p.ProductID
+where od.Quantity > 5
+order by Quantity desc;
+----------------------------------------------------------
+4. ต้องการหาสินค้าที่มีการสั่งซื้อมากที่สุด:
+select p.ProductName as "ชื่อสินค้า", sum(od.Quantity) as "จำนวนการสั่งซื้อ"
+from Products as p
+inner join OrderDetail as od on od.ProductID = p.ProductID
+group by p.ProductName
+order by sum(od.Quantity) desc;
+
